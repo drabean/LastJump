@@ -76,6 +76,7 @@ public class PlayerMove : MonoBehaviour
     void OnJump()
     {
         if (!canJump) return;
+        SoundManager.Inst.Play("Jump");
         rb2D.velocityY = 0;
         rb2D.AddForceY(jumpPower, ForceMode2D.Impulse);
         //SendMessage("SetVertical", power);
@@ -84,6 +85,7 @@ public class PlayerMove : MonoBehaviour
     public void Revive()
     {
         hit.FlashWhite(0.5f);
+        SoundManager.Inst.Play("Revive");
         rb2D.AddForceY(jumpPower, ForceMode2D.Impulse);
     }
     bool isDead;
@@ -92,6 +94,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
+        SoundManager.Inst.Play("SkulHit");
         GameManager.Inst.SpawnGhost(transform.position);
         Destroy(Instantiate(deathEffect, transform.position, Quaternion.identity), 2.5f);
         Destroy(gameObject);

@@ -10,7 +10,7 @@ public class ItemInteract : MonoBehaviour
         {
             Destroy(collision.gameObject);
             GameManager.Inst.GetItem(transform.position);
-            StartCoroutine(Owner.co_Toggle());
+            Owner.Togle();
         }
     }
 

@@ -9,7 +9,12 @@ public class Item : MonoBehaviour
     {
         sp.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.5f);
         sp.gameObject.SetActive(true);
+    }
+
+    public void Togle()
+    {
+        StartCoroutine(co_Toggle());
     }
 }

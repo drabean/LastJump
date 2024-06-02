@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 
@@ -15,12 +16,28 @@ public class GameManager : MonoBehaviour
     public Ghost ghostPrefab;
     public static GameManager Inst;
 
+
+    public float time;
+
     public void Awake()
     {
         cam = Camera.main;
         Inst = this;
     }
-
+    private void Start()
+    {
+        StartCoroutine(co_Timer());
+        FadeOut();
+        SoundManager.Inst.PlayBGM("Main");
+    }
+    IEnumerator co_Timer()
+    {
+        while(true)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+    }
     public void GetStage(Stage curStage)
     {
         Stage newStage = Instantiate(StageLis[curStage.curStageIdx + 1]);
@@ -36,6 +53,7 @@ public class GameManager : MonoBehaviour
     float cameraMoveSpeed = 25.0f;
     public void CamMove(Transform dest)
     {
+        SoundManager.Inst.Play("StageMove");
         StartCoroutine(co_CamMove(dest));
     }
 
@@ -88,6 +106,30 @@ public class GameManager : MonoBehaviour
         if (curPlayer != null) yield break;
         curPlayer = Instantiate(playerPrefab, CurStage.RevivePos.position, Quaternion.identity);
         curPlayer.Revive();
+    }
+
+    #endregion
+
+    #region UI
+    float fadeTime = 0.6f;
+    public Image fadeImage;
+
+    IEnumerator Fade(bool isFadeIn)
+    {
+        float fadeAmount = 1;
+
+        while (fadeAmount >= 0)
+        {
+            fadeAmount -= Time.deltaTime * (1 / fadeTime);
+            float curProgress = isFadeIn ? fadeAmount : 1 - fadeAmount;
+            fadeImage.color = new Color(0, 0, 0, curProgress);
+            yield return null;
+        }
+    }
+
+    public void FadeOut()
+    {
+        StartCoroutine(Fade(true));
     }
 
     #endregion
