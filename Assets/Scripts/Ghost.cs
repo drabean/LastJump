@@ -42,6 +42,11 @@ public class Ghost : MonoBehaviour
             yield return null;
         }
 
+        SoulDeath();
+    }
+
+    public void SoulDeath()
+    {
         Destroy(Instantiate(deathEffect, transform.position, Quaternion.identity), 2.5f);
         SoundManager.Inst.Play("SoulHit");
         GameManager.Inst.Revive();

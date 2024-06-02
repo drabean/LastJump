@@ -815,11 +815,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8529453768431536882, guid: c4ad152b7f7d7114c8557ad295ae7382, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.16
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 8529453768431536882, guid: c4ad152b7f7d7114c8557ad295ae7382, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.05
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8529453768431536882, guid: c4ad152b7f7d7114c8557ad295ae7382, type: 3}
       propertyPath: m_LocalPosition.z
@@ -978,14 +978,18 @@ MonoBehaviour:
   - {fileID: 1745158431463165653, guid: a79309e5fdf29eb45bb047fd68cdd827, type: 3}
   - {fileID: 1745158431463165653, guid: d2e6ce5ed8b50e84c9022d2abeace923, type: 3}
   - {fileID: 1745158431463165653, guid: 1a5fa8d99913de04bbdc145f3d15ed8f, type: 3}
+  - {fileID: 1745158431463165653, guid: 059bde5969d153e478affb85e4a37d0c, type: 3}
   - {fileID: 1745158431463165653, guid: a56edac2b858d494289889e03cb5c963, type: 3}
   - {fileID: 1745158431463165653, guid: 024391d201424744ca8e0d8205745027, type: 3}
   - {fileID: 1745158431463165653, guid: 37cdd02bba776c144998c9b7357e6d20, type: 3}
+  - {fileID: 1745158431463165653, guid: 4ccb402f619344f4f973a2d79b7a0f60, type: 3}
   - {fileID: 1745158431463165653, guid: 06eeae466e7c5b24290a63358f44ee14, type: 3}
   - {fileID: 1745158431463165653, guid: 447af338169231a4ab5cb0baf88c75bf, type: 3}
   - {fileID: 1745158431463165653, guid: e63553cfaf9dfd94293931b6c748b3a6, type: 3}
   - {fileID: 1745158431463165653, guid: 3bc9be473a32b834eb97466709a3b646, type: 3}
+  - {fileID: 1745158431463165653, guid: e4881c01a29ef9b448595662431846cb, type: 3}
   - {fileID: 1745158431463165653, guid: 6b8a2fd48ddd7d748bbee4e8c1181441, type: 3}
+  - {fileID: 1745158431463165653, guid: 3cfccece36960694f80e97116a03645a, type: 3}
   - {fileID: 1745158431463165653, guid: 54b537c09be2c194889e30d73161ee5f, type: 3}
   CurStage: {fileID: 0}
   PrevStage: {fileID: 0}

@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -43324961647016133, guid: 4bf408850fd9e9c4b9e7a25f8bf36d92, type: 3}
+  m_Sprite: {fileID: -1635352654134938649, guid: b625c2a860f0ea8409e01ba610f0157b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Owner: {fileID: 8000258319754431782}
-  isSkul: 1
+  isSkul: 0
 --- !u!1 &8183074565106405037
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 8000258319754431782}
   - component: {fileID: 8710399104988677457}
   m_Layer: 0
-  m_Name: Item
+  m_Name: Cross
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
