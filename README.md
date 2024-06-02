@@ -1,4 +1,5 @@
 # LastJump
+![ScreenShot](https://github.com/drabean/LastJump/assets/27190806/867129ce-1d6b-4bf5-878a-b71b32577c24)
 
 Submission for Micro Jam 015: Ghost
 
